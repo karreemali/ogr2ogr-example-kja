@@ -16,19 +16,19 @@ jobs:
     permissions:
       contents: write
     name: main
-    steps:
-      - run: apt-get update
+    # steps:
+    #   - run: apt-get update
 
-      - run: apt-get install -y git
+    #   - run: apt-get install -y git
 
-      - uses: actions/checkout@v3
+    #   - uses: actions/checkout@v3
 
-      - run: sh ./run.sh
+    #   - run: sh ./run.sh
 
-      - run: ls
+    #   - run: ls
 
-      # prevents fatal: detected dubious ownership in repository at '/__w/ogr2ogr/ogr2ogr'
-      - run: git config --global --add safe.directory /__w/ogr2ogr-example-kja/ogr2ogr-example-kja
+    #   # prevents fatal: detected dubious ownership in repository at '/__w/ogr2ogr/ogr2ogr'
+    #   - run: git config --global --add safe.directory /__w/ogr2ogr-example-kja/ogr2ogr-example-kja
 
-      # Commit all changed files back to the repository
-      - uses: stefanzweifel/git-auto-commit-action@v5
+    #   # Commit all changed files back to the repository
+    #   - uses: stefanzweifel/git-auto-commit-action@v5
